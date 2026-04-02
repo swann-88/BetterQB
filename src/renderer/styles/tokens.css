@@ -1,0 +1,91 @@
+:root {
+  color-scheme: light;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  --radius-1: 8px;
+  --radius-2: 10px;
+  --radius-3: 12px;
+  --radius-4: 16px;
+  --radius-pill: 999px;
+
+  --text-1: #273241;
+  --text-2: #5f6f82;
+  --text-3: #8b98a8;
+
+  --line-1: #ccd6e0;
+  --line-2: #d8e1ea;
+  --line-3: #e7edf3;
+
+  --surface-app: #edf1f6;
+  --surface-sidebar: #ebece8;
+  --surface-panel: #f5f7fa;
+  --surface-card: #fbfcfd;
+  --surface-control: #f8fafc;
+  --surface-overlay: rgba(248, 250, 252, 0.95);
+
+  --accent: #2b7cff;
+  --accent-2: #136ff2;
+  --accent-soft: #e6f0ff;
+
+  --ok: #2a7d53;
+  --warn: #9c5e2f;
+
+  --shadow-1: 0 1px 2px rgba(15, 22, 32, 0.06), 0 6px 16px rgba(15, 22, 32, 0.06);
+  --shadow-2: 0 8px 24px rgba(15, 22, 32, 0.1);
+  --shadow-3: 0 20px 48px rgba(15, 22, 32, 0.2);
+
+  --motion-fast: 120ms ease;
+  --motion-base: 180ms ease;
+  --motion-slow: 260ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-1);
+  background: radial-gradient(1150px 700px at 85% -10%, #dceaf8 0%, var(--surface-app) 58%, #e8edf4 100%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #c9d3de;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-root {
+  min-height: 100vh;
+  position: relative;
+}

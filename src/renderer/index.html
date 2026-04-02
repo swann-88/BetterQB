@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qBittorrent 桌面客户端</title>
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div id="app-root" class="app-root">
+      <header id="status-banner" class="status-banner" aria-live="polite"></header>
+
+      <section id="entry-screen" class="entry-screen" aria-label="进入页" data-action="enter-app">
+        <div id="entry-scene" class="entry-scene" aria-hidden="true"></div>
+        <div class="entry-overlay">
+          <p class="entry-fullname entry-en" hidden>Deep Information Processing and Communication Technology Research Development Bureau</p>
+          <p class="entry-fullname entry-zh" hidden>深度信息处理与通信研发局</p>
+          <p class="entry-subline entry-en">Present By Pigeoncat Studio</p>
+          <p class="entry-subline entry-zh">鸽子猫工作室呈现</p>
+        </div>
+        <p class="entry-tech-stack entry-en">Tech Stack: Electron · HTML · CSS · JavaScript · Three.js · qB WebUI API</p>
+        <p class="entry-tech-stack entry-zh">技术栈：Electron · HTML · CSS · JavaScript · Three.js · qB WebUI API</p>
+      </section>
+
+      <main id="shell-stage" class="shell-stage" aria-label="主界面预加载">
+        <div class="app-frame">
+          <header class="app-topbar" aria-label="应用顶栏">
+            <div class="app-topbar-drag">
+              <strong class="app-topbar-title">qB 桌面客户端</strong>
+              <span id="app-page-indicator" class="app-page-indicator">主页</span>
+            </div>
+          </header>
+
+          <div class="app-pages">
+            <section id="main-page" class="page page-main page-split" aria-label="主页面">
+              <aside class="left-nav">
+                <div>
+                  <label class="settings-search sidebar-search main-sidebar-search" for="main-search">
+                    <span>搜索任务</span>
+                    <input id="main-search" type="search" placeholder="搜索任务" autocomplete="off" />
+                  </label>
+                  <nav id="primary-nav" class="primary-nav" aria-label="任务筛选"></nav>
+                </div>
+                <button type="button" class="settings-link" data-action="open-settings">
+                  设置
+                </button>
+              </aside>
+
+              <section class="main-region">
+                <header class="top-band">
+                  <div class="page-context">
+                    <p class="page-context-label">任务</p>
+                    <p id="main-action-feedback" class="main-action-feedback" aria-live="polite"></p>
+                  </div>
+
+                  <div class="top-band-right">
+                    <div class="total-speeds" aria-label="总上传下载速度">
+                      <span class="speed-pill">
+                        <em>下载</em>
+                        <strong id="total-down-speed">0 B/s</strong>
+                      </span>
+                      <span class="speed-pill">
+                        <em>上传</em>
+                        <strong id="total-up-speed">0 B/s</strong>
+                      </span>
+                    </div>
+                    <div class="quick-actions" aria-label="快捷操作">
+                      <button type="button" class="icon-control" data-action="start-visible" title="启动当前可见任务" aria-label="启动当前可见任务">
+                        <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                          <path d="M6 4L15 10L6 16Z"></path>
+                        </svg>
+                      </button>
+                      <button type="button" class="icon-control" data-action="pause-visible" title="暂停当前可见任务" aria-label="暂停当前可见任务">
+                        <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                          <rect x="5" y="4" width="3.5" height="12"></rect>
+                          <rect x="11.5" y="4" width="3.5" height="12"></rect>
+                        </svg>
+                      </button>
+                      <button type="button" class="icon-control" data-action="toggle-speed-mode" title="切换限速模式" aria-label="切换限速模式">
+                        <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                          <path d="M4 13.5A6 6 0 1 1 16 13.5"></path>
+                          <path d="M10 10L14 8"></path>
+                        </svg>
+                      </button>
+                      <button type="button" class="icon-control" data-action="open-add-sheet" title="添加任务" aria-label="添加任务">
+                        <svg viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                          <path d="M10 4V16"></path>
+                          <path d="M4 10H16"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </header>
+
+                <section id="content-host" class="content-host" aria-live="polite"></section>
+              </section>
+            </section>
+
+            <section id="settings-page" class="settings-page page page-settings page-split" aria-label="设置页面">
+              <aside class="settings-sidebar-shell">
+                <label class="settings-search sidebar-search" for="settings-search">
+                  <span>搜索设置</span>
+                  <input id="settings-search" type="search" placeholder="搜索" autocomplete="off" />
+                </label>
+                <nav id="settings-nav" class="settings-nav" aria-label="设置分类"></nav>
+              </aside>
+
+              <section class="settings-main-shell">
+                <header class="settings-head">
+                  <div class="history-controls">
+                    <button type="button" data-action="settings-back" aria-label="后退">&lt;</button>
+                    <button type="button" data-action="settings-forward" aria-label="前进">&gt;</button>
+                  </div>
+                  <button type="button" class="settings-done" data-action="close-settings">完成</button>
+                </header>
+                <article id="settings-content" class="settings-content"></article>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <aside id="speed-drawer" class="speed-drawer" aria-label="速度抽屉"></aside>
+      </main>
+
+      <section id="sheet-layer" class="sheet-layer" aria-label="弹层"></section>
+      <div id="context-menu" class="context-menu" aria-label="右键菜单"></div>
+      <input id="torrent-file-input" type="file" accept=".torrent" hidden />
+    </div>
+
+    <script type="module" src="./scripts/renderer.js"></script>
+  </body>
+</html>

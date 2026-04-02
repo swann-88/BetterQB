@@ -1,0 +1,61 @@
+{
+  "name": "betterqb",
+  "version": "1.0.1",
+  "description": "BetterQB Windows desktop client with bundled qBittorrent backend",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "prepare:bundled-backend": "node scripts/prepare-bundled-backend.js",
+    "build:win": "npm run prepare:bundled-backend && electron-builder --win nsis --x64"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "three": "^0.183.2"
+  },
+  "build": {
+    "appId": "com.betterqb.desktop",
+    "productName": "BetterQB",
+    "copyright": "Copyright (c) 2026 BetterQB",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "release-assets/qbittorrent",
+        "to": "backend/qbittorrent",
+        "filter": [
+          "**/*",
+          "!**/*.pdb",
+          "!**/uninst.exe"
+        ]
+      }
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "artifactName": "BetterQB-${version}-${arch}.${ext}",
+      "target": [
+        "nsis"
+      ],
+      "requestedExecutionLevel": "asInvoker",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BetterQB"
+    }
+  }
+}

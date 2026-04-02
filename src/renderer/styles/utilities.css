@@ -1,0 +1,75 @@
+@keyframes sheetPop {
+  from {
+    transform: translateY(8px) scale(0.985);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page-split {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    justify-content: flex-start;
+  }
+
+  .top-band {
+    grid-template-columns: 1fr;
+  }
+
+  .card-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .details-row {
+    grid-template-columns: 1fr;
+  }
+
+  .details-summary-grid,
+  .overview-grid,
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sheet-summary,
+  .details-anchors,
+  .sheet-scroll {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .add-main-header,
+  .add-main-scroll,
+  .add-bottom-bar,
+  .confirm-fixed-top,
+  .confirm-scroll {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .add-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+
+  .add-actions {
+    justify-content: flex-end;
+  }
+
+  .option-row {
+    flex-direction: column;
+  }
+
+  .option-row strong {
+    text-align: left;
+  }
+}

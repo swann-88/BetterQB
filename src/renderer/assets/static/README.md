@@ -1,0 +1,1 @@
+# Static assets for the standalone Electron client live in this folder.

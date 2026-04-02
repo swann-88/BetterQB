@@ -1,0 +1,123 @@
+Add torrents to top of queue
+Additional trackers list
+Additional trackers URL list
+Alternative download rate limit
+Alternative upload rate limit
+Always add configured trackers
+Announce IP
+Announce port
+Anonymous mode
+Append .!qB extension
+Application language
+Apply limits to LAN peers
+Apply limits to transport overhead
+Apply limits to uTP protocol
+Async I/O threads
+Auth bypass subnet whitelist
+Auto TMM on category change
+Auto TMM on category save-path change
+Auto TMM on default save path change
+Automatic torrent management by default
+Ban duration (s)
+Bdecode depth limit
+Bdecode token limit
+BitTorrent protocol mode
+Bypass auth for localhost
+Clickjacking protection
+Confirm torrent deletion
+Confirm torrent recheck
+CSRF protection
+Default save path
+Delete content files with torrent
+Disk cache (MiB)
+Disk cache TTL (s)
+Disk queue size
+Do not count slow torrents
+Download repack/proper episodes
+Email notification
+Enable alternate-rate scheduler
+Enable auth bypass subnet whitelist
+Enable DHT
+Enable LSD
+Enable max inactive seeding time
+Enable max ratio
+Enable max seeding time
+Enable PeX
+Enable queueing
+Enable RSS auto-downloading
+Enable RSS processing
+Encryption mode
+Export .torrent files to
+Export finished .torrent files to
+Fetch delay (s)
+Fetch trackers from URL list
+File logging
+File pool size
+Global download rate limit
+Global max connections
+Global max upload slots
+Global upload rate limit
+Hashing threads
+Host header validation
+Host header whitelist
+Listening port
+Max active checking torrents
+Max active downloads
+Max active torrents
+Max active uploads
+Max articles per feed
+Max auth failures
+Max inactive seeding time (min)
+Max ratio
+Max seeding time (min)
+Memory working set limit
+Monitored folders
+Outgoing connections per second
+Performance warning
+Per-torrent max connections
+Per-torrent max upload slots
+Pre-allocate disk space
+Proxy host
+Proxy port
+Proxy type
+Reannounce when address changes
+Recheck completed torrents
+Refresh interval (min)
+Resolve peer countries
+Resolve peer host names
+Resume data storage type
+Reverse proxy support
+Scheduler days mask
+Scheduler end hour
+Scheduler end minute
+Scheduler start hour
+Scheduler start minute
+Secure cookie
+Send buffer low watermark
+Send buffer watermark
+Send buffer watermark factor
+Session timeout (s)
+Share ratio action
+Show external IP in status bar
+Slow torrent download threshold
+Slow torrent inactivity timer (s)
+Slow torrent upload threshold
+Smart episode filters
+Start torrents paused
+Temporary path
+Transfer list refresh interval (ms)
+Trusted reverse proxies
+Use .unwanted folder
+Use category paths in manual mode
+Use HTTPS
+Use proxy for BitTorrent
+Use proxy for misc services
+Use proxy for peer connections
+Use proxy for RSS
+Use temporary path
+Use UPnP/NAT-PMP
+WebUI address
+WebUI API key
+WebUI port
+WebUI UPnP/NAT-PMP
+WebUI username
